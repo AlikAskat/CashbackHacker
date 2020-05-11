@@ -17,16 +17,15 @@ class CashbackHackServiceTest {
         assertEquals(expected, actual);
     }
 
+
     @Test
-    void remain() {
+    void calculateCashbackHack() {
         CashbackHackService cashbackHackService = new CashbackHackService();
-        int amount = 1000;
+        int amount = 2000;
 
         int actual = cashbackHackService.calculateCashbackHack(amount);
-        int expected = 10;
+        int expected = 0;
 
         assertEquals(expected, actual);
     }
-
-
 }
