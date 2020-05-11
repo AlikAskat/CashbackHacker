@@ -1,17 +1,14 @@
 package ru.netology.service;
 
 public class CashbackHackService {
-    public int calculateBonus (int amount) {
-        if (amount < 1000) {
-          return 0;
-        }
+    private final int boundary = 1000;
+    private int bonus;
 
-        int bonus = (amount - 1000) / 100;
+    public int remain(int amount) {
+        return boundary - amount%boundary;
+    }
 
-        if (bonus > 100) {
-            return 100;
-        }
-
+    public int calculateCashbackHack(int i) {
         return bonus;
     }
 }
